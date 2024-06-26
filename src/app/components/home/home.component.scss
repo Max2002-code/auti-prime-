@@ -1,0 +1,99 @@
+/* Stili generali */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+    margin-top: 56px; /* Offset per la navbar fissa */
+  }
+  
+  /* Navbar */
+  .navbar {
+    border-bottom: 2px solid #17a2b8;
+  }
+  
+  .navbar-brand {
+    font-weight: bold;
+    font-size: 1.5rem;
+  }
+  
+  .nav-link {
+    font-size: 1.1rem;
+    transition: color 0.3s;
+  }
+  
+  .nav-link:hover {
+    color: #17a2b8;
+  }
+  
+  /* Carosello */
+  .carousel-inner img {
+    height: 500px;
+    object-fit: cover;
+  }
+  
+  .carousel-caption {
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+  }
+  
+  /* Card */
+  .card {
+    border-radius: 0.5rem;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  .card-title {
+    font-weight: bold;
+    color: #007bff;
+  }
+  
+  .card-text {
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  .card-img-top {
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+  }
+  
+  /* Pulsanti */
+  .btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+  }
+  
+  .btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #004085;
+  }
+  
+  /* Footer */
+  .footer {
+    background-color: #343a40;
+  }
+  
+  .footer h5 {
+    color: #17a2b8;
+  }
+  
+  .footer a {
+    color: #17a2b8;
+  }
+  
+  .footer a:hover {
+    text-decoration: underline;
+  }
+  
+  .footer hr {
+    border-top: 1px solid #6c757d;
+  }
+  
+  .footer p {
+    margin: 0;
+  }
+  

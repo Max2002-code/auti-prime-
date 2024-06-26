@@ -1,0 +1,16 @@
+<div>
+  <h2>Elenco delle auto</h2>
+  <div *ngIf="cars.length > 0">
+    <div class="card-container">
+      <div class="card" *ngFor="let car of cars">
+        <div class="card-body">
+          <h5 class="card-title">{{ car.modello }} - {{ car.brand }}</h5>
+          <p class="card-text">Prezzo: ${{ car.price }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="cars.length === 0">
+    <p>Nessuna auto disponibile al momento.</p>
+  </div>
+</div>
