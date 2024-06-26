@@ -1,16 +1,21 @@
-<div>
-  <h2>Elenco delle auto</h2>
-  <div *ngIf="cars.length > 0">
-    <div class="card-container">
-      <div class="card" *ngFor="let car of cars">
+<div class="container">
+  <h1 class="my-4">Catalogo Auto</h1>
+  <div class="row">
+    <div class="col-md-4" *ngFor="let car of cars">
+      <div class="card mb-4 shadow-sm">
+        <img class="card-img-top" src="..." alt="Car Image Placeholder"> <!-- Inserisci l'immagine della macchina -->
         <div class="card-body">
-          <h5 class="card-title">{{ car.modello }} - {{ car.brand }}</h5>
-          <p class="card-text">Prezzo: ${{ car.price }}</p>
+          <h5 class="card-title">{{ car.brand }}</h5>
+          <p class="card-text">Modello: {{ car.modello }}</p>
+          <p class="card-text">Prezzo: {{ car.price | currency:'EUR':'symbol':'1.2-2' }}</p>
+          <div class="d-flex justify-content-between align-items-center">
+            <div class="btn-group">
+              <button type="button" class="btn btn-sm btn-outline-secondary">Dettagli</button>
+              <button type="button" class="btn btn-sm btn-outline-secondary">Modifica</button>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-  <div *ngIf="cars.length === 0">
-    <p>Nessuna auto disponibile al momento.</p>
   </div>
 </div>

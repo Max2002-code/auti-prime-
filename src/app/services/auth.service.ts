@@ -12,7 +12,7 @@ export class AuthService {
     this.getauth();
     }
     getauth(){
-    this.http.get('http://localhost:4567').subscribe(data=>{
+    this.http.get('http://localhost:8080').subscribe(data=>{
     console.log(data)
     })
     }
