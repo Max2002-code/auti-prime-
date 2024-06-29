@@ -13,7 +13,7 @@ this.getCandy();
 }
 
 getCandy(){
-this.http.get('http://localhost:8080/api/test').subscribe(data=>{
+this.http.get('http://localhost:8080/car/all').subscribe(data=>{
 console.log(data)
 })
 }

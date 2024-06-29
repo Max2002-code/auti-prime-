@@ -1,17 +1,58 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AutoPrime - Catalogo Auto</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="#">
+      <img src="assets/images/Logo.jpeg" alt="Logo" width="30" height="30" class="d-inline-block align-top">
+      AutoPrime
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" href="/Contatti">Contatti</a>
+        </li>
+        <ul class="navbar-nav">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownUtente" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <img src="assets/images/avatar.png" alt="Avatar" width="30" height="30" class="d-inline-block align-top rounded-circle me-2">
+              Utente
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownUtente">
+              <li><a class="dropdown-item" href="/login">Login</a></li>
+              <li><a class="dropdown-item" href="/register">Registrazione</a></li>
+            </ul>
+          </li>
+        </ul>
+      </ul>
+    </div>
+  </div>
+</nav>
+
 <div class="container">
-  <h1 class="my-4">Catalogo Auto</h1>
-  <div class="row">
+  <h1 class="my-4 mb-5 section-title">Catalogo Auto</h1>
+  <div class="row featured-cars">
     <div class="col-md-4" *ngFor="let car of cars">
       <div class="card mb-4 shadow-sm">
         <img class="card-img-top" src="..." alt="Car Image Placeholder"> <!-- Inserisci l'immagine della macchina -->
         <div class="card-body">
           <h5 class="card-title">{{ car.brand }}</h5>
-          <p class="card-text">Modello: {{ car.modello }}</p>
-          <p class="card-text">Prezzo: {{ car.price | currency:'EUR':'symbol':'1.2-2' }}</p>
+          <p class="card-text">Modello: {{ car.model }}</p>
+          <p class="card-text">Prezzo: {{ car.price| currency:'EUR':'symbol':'1.2-2' }}</p>
           <div class="d-flex justify-content-between align-items-center">
             <div class="btn-group">
-              <button type="button" class="btn btn-sm btn-outline-secondary">Dettagli</button>
-              <button type="button" class="btn btn-sm btn-outline-secondary">Modifica</button>
+              <button type="button" class="btn btn-sm btn-outline-primary">Dettagli</button>
+              <button type="button" class="btn btn-sm btn-outline-primary">Modifica</button>
             </div>
           </div>
         </div>
@@ -19,3 +60,7 @@
     </div>
   </div>
 </div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

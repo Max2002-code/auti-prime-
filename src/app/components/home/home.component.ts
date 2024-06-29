@@ -7,10 +7,10 @@ import { Component } from '@angular/core';
 })
 export class HomeComponent {
   bestSellingCars = [
-    { brand: 'Toyota', model: 'Corolla', price: '25,000', image: 'assets/images/toyotaCorolla.jpg' },
-    { brand: 'Honda', model: 'Civic', price: '23,500', image: 'assets/images/hondaCivic.jpg' },
-    { brand: 'Ford', model: 'Mustang', price: '40,000', image: 'assets/images/fordMustang.jpg' },
-    { brand: 'Chevrolet', model: 'Camaro', price: '38,500', image: 'assets/images/chevroletCamaro.jpg' },
+    { brand: 'Toyota', modello: 'Corolla', price: '25,000', image: 'assets/images/toyotaCorolla.jpg' },
+    { brand: 'Honda', modello: 'Civic', price: '23,500', image: 'assets/images/hondaCivic.jpg' },
+    { brand: 'Ford', modello: 'Mustang', price: '40,000', image: 'assets/images/fordMustang.jpg' },
+    { brand: 'Chevrolet', modello: 'Camaro', price: '38,500', image: 'assets/images/chevroletCamaro.jpg' },
     // Aggiungi altre auto più vendute secondo necessità
   ];
 

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contatti - AutoPrime</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+  <!-- Navbar con logo -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container-fluid">
+      <!-- Logo e testo -->
+      <a class="navbar-brand" href="/">
+        <img src="assets/images/Logo.jpeg" alt="Logo del tuo concessionario" width="30" height="30" class="d-inline-block align-top me-2">
+        AUTOPRIME
+      </a>
+      
+      <!-- Navbar Toggler per la versione mobile -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      
+      <!-- Elementi della Navbar -->
+      <div class="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
+        
+        <!-- Link Catalogo auto -->
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="/car-list">Catalogo auto</a>
+          </li>
+        </ul>
+        <!-- Dropdown Utente -->
+        <ul class="navbar-nav">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownUtente" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <img src="assets/images/avatar.png" alt="Avatar" width="30" height="30" class="d-inline-block align-top rounded-circle me-2">
+              Utente
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownUtente">
+              <li><a class="dropdown-item" href="/login">Login</a></li>
+              <li><a class="dropdown-item" href="/register">Registrazione</a></li>
+            </ul>
+          </li>
+        </ul>
+        
+      </div>
+    </div>
+  </nav>
+  
+  <div class="container mt-5 pt-4">
+    <div class="row">
+      <div class="col-md-6">
+        <h1 class="text-primary mt-4">Contattaci</h1>
+        <p class="lead">Siamo qui per aiutarti! Ecco come puoi metterti in contatto con noi.</p>
+        <ul class="list-unstyled">
+          <li><i class="fas fa-phone"></i> Telefono: +39 123 456789</li>
+          <li><i class="fas fa-envelope"></i> Email: info@autoprimedemo.com</li>
+          <li><i class="fas fa-map-marker-alt"></i> Indirizzo: Via delle Auto, 1 - 00100, Roma</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  
+  <div class="container mt-4">
+    <div class="row">
+      <div class="col-12">
+        <h2 class="text-primary">La nostra posizione</h2>
+        <!-- Contenitore per la mappa -->
+        <div id="map" style="height: 400px;"></div>
+      </div>
+    </div>
+  </div>
+  
+  <footer class="footer mt-auto py-3 bg-dark text-light mt-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <h5>Informazioni di Contatto</h5>
+          <ul class="list-unstyled">
+            <li>Telefono: +39 123 456789</li>
+            <li>Email: info@autoprimedemo.com</li>
+            <li>Indirizzo: Via delle Auto, 1 - 00100, Roma</li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h5>Seguici</h5>
+          <ul class="list-unstyled">
+            <li><a href="#" class="text-light"><i class="fab fa-facebook-f"></i> Facebook</a></li>
+            <li><a href="#" class="text-light"><i class="fab fa-twitter"></i> Twitter</a></li>
+            <li><a href="#" class="text-light"><i class="fab fa-instagram"></i> Instagram</a></li>
+            <li><a href="#" class="text-light"><i class="fab fa-linkedin-in"></i> LinkedIn</a></li>
+          </ul>
+        </div>
+      </div>
+      <hr class="mt-4 mb-3">
+      <div class="row">
+        <div class="col text-center">
+          <p>&copy; 2024 AutoPrime. Tutti i diritti riservati.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  
+  <!-- Includi Popper.js per Bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+  <!-- Includi Bootstrap JavaScript -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.min.js"></script>
+  <!-- Includi la libreria di Google Maps -->
+  <script src="https://maps.googleapis.com/maps/api/js?libraries=places&callback=initMap" async defer></script>
+
+  <script src="maps.js"></script>
+  
+  <script>
+function initMap() {
+  var location = { lat: 41.9028, lng: 12.4964 };
+  var map = new google.maps.Map(document.getElementById('map'), {
+    zoom: 14,
+    center: location
+  });
+  var marker = new google.maps.Marker({
+    position: location,
+    map: map
+  });
+}
+  </script>
+</body>
+</html>

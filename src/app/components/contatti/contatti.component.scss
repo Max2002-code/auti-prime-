@@ -1,7 +1,8 @@
+/* contact-page.component.css */
 /* Navbar Styles */
 
 .navbar {
-  padding: 15px 0;
+  padding: 10px;
   background-color: #343a40;
 }
 
@@ -27,74 +28,23 @@
   color: #007bff;
 }
 
-/* Hero Section */
+/* Contatti Section */
 
-.hero-section {
-  background-color: #007bff;
-  color: #fff;
-  padding: 150px 0;
+.container {
+  margin-top: 80px; /* Spazio sopra il contenuto */
 }
 
-.hero-title {
-  font-size: 3rem;
-  font-weight: bold;
-  margin-bottom: 20px;
-}
-
-.hero-text {
-  font-size: 1.5rem;
-  margin-bottom: 30px;
-}
-
-.btn-primary {
-  background-color: #fff;
+.text-primary {
   color: #007bff;
-  border-color: #007bff;
-  font-weight: bold;
 }
 
-.btn-primary:hover {
-  background-color: #007bff;
-  color: #fff;
+.list-unstyled {
+  padding-left: 0;
+  list-style: none;
 }
 
-/* Featured Cars Section */
-
-.section-title {
-  font-size: 2.5rem;
-  font-weight: bold;
-  color: #333;
-  margin-bottom: 40px;
-}
-
-.featured-cars .card {
-  border: none;
-  transition: transform 0.3s ease;
-}
-
-.featured-cars .card:hover {
-  transform: translateY(-5px);
-}
-
-.featured-cars .card-title {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #333;
-}
-
-.featured-cars .card-text {
-  color: #666;
+.list-unstyled li {
   margin-bottom: 10px;
-}
-
-.btn-outline-primary {
-  color: #007bff;
-  border-color: #007bff;
-}
-
-.btn-outline-primary:hover {
-  background-color: #007bff;
-  color: #fff;
 }
 
 /* Footer Section */
@@ -125,4 +75,3 @@
 .footer ul li a {
   color: #fff;
 }
-

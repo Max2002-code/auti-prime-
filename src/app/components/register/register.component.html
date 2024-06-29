@@ -1,0 +1,84 @@
+<!-- Navbar -->
+<header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img src="assets/images/Logo.jpeg" alt="Logo" width="30" height="30" class="d-inline-block align-top">
+          AutoPrime
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="/Contatti">Contatti</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownUtente" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <img src="assets/images/avatar.png" alt="Avatar" width="30" height="30" class="d-inline-block align-top rounded-circle me-2">
+                Utente
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownUtente">
+                <li><a class="dropdown-item" href="/login">Login</a></li>
+                <li><a class="dropdown-item" href="/register">Registrazione</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  
+  <!-- Main content area -->
+  <main>
+    <div class="container">
+      <div class="hero-section">
+        <h2 class="hero-title">Registrazione</h2>
+        <form class="login-form" (ngSubmit)="register()">
+          <div class="form-group">
+            <label class="text-dark" for="username">Username:</label>
+            <input type="text" id="username" name="username" [(ngModel)]="username" required>
+          </div>
+          <div class="form-group">
+            <label class="text-dark" for="password">Password:</label>
+            <input type="password" id="password" name="password" [(ngModel)]="password" required>
+          </div>
+          <button type="submit" class="btn btn-primary">Registrati</button>
+          <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
+        </form>
+      </div>
+    </div>
+  </main>
+  
+  <!-- Footer -->
+  <footer class="footer mt-auto py-3 bg-dark text-light mt-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <h5>Informazioni di Contatto</h5>
+          <ul class="list-unstyled">
+            <li>Telefono: +39 123 456789</li>
+            <li>Email: info@autoprimedemo.com</li>
+            <li>Indirizzo: Via delle Auto, 1 - 00100, Roma</li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h5>Seguici</h5>
+          <ul class="list-unstyled">
+            <li><a href="#" class="text-light"><i class="fab fa-facebook-f"></i> Facebook</a></li>
+            <li><a href="#" class="text-light"><i class="fab fa-twitter"></i> Twitter</a></li>
+            <li><a href="#" class="text-light"><i class="fab fa-instagram"></i> Instagram</a></li>
+            <li><a href="#" class="text-light"><i class="fab fa-linkedin-in"></i> LinkedIn</a></li>
+          </ul>
+        </div>
+      </div>
+      <hr class="mt-4 mb-3">
+      <div class="row">
+        <div class="col text-center">
+          <p>&copy; 2024 AutoPrime. Tutti i diritti riservati.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  
