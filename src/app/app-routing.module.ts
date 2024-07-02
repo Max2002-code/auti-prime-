@@ -6,13 +6,15 @@ import { CommonModule } from '@angular/common';
 import { ContattiComponent } from './components/contatti/contatti.component';
 import { RegisterComponent } from './components/register/register.component';
 import { LoginComponent } from './components/login/login.component';
+import { CarrelloComponent } from './components/carrello/carrello.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
   {path: 'register', component: RegisterComponent},
   {path: 'login', component: LoginComponent},
   { path: 'car-list', component: CarListComponent},
-  {path: 'Contatti', component: ContattiComponent}
+  { path: 'carrello', component: CarrelloComponent},
+  {path: 'Contatti', component: ContattiComponent},
 ];
 
 @NgModule({

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
@@ -11,15 +12,16 @@ export class RegisterComponent {
   password!: string;
   errorMessage!: string;
 
-  constructor(private authService: AuthService) {}
+  constructor(private authService: AuthService, private router: Router) {}
 
   register() {
     this.authService.register(this.username, this.password).subscribe(
       (data) => {
         if (data.status === 'ok') {
-          // Registration success, navigate to login page or perform other actions
+          // Registration success, navigate to login page
           console.log('Registration success:', data.message);
           this.errorMessage = '';
+          this.router.navigateByUrl('/login'); // Redirect to login page
         } else {
           // Registration error, display error message
           console.error('Registration error:', data.message);

@@ -1,0 +1,24 @@
+<!-- carrello.component.html -->
+
+<div class="container">
+  <h1 class="my-4 mb-5 section-title">Carrello</h1>
+
+  <div *ngIf="carrello.length === 0" class="alert alert-info" role="alert">
+    Il tuo carrello è vuoto.
+  </div>
+
+  <div *ngIf="carrello.length > 0">
+    <ul class="list-group">
+      <li class="list-group-item d-flex justify-content-between align-items-center" *ngFor="let car of carrello">
+        <div>
+          <h5 class="card-title">{{ car.brand }}</h5>
+          <p class="card-text">Modello: {{ car.model }}</p>
+          <p class="card-text">Prezzo: {{ car.price | currency:'EUR':'symbol':'1.2-2' }}</p>
+        </div>
+        <button type="button" class="btn btn-outline-danger btn-sm" (click)="removeFromCart(car)">
+          Rimuovi dal carrello
+        </button>
+      </li>
+    </ul>
+  </div>
+</div>
