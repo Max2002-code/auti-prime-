@@ -24,7 +24,7 @@ import { CarrelloComponent } from './components/carrello/carrello.component';
     UserDetailComponent,
     LoginComponent,
     RegisterComponent,
-    CarrelloComponent
+    CarrelloComponent,
   ],
   imports: [
     BrowserModule,

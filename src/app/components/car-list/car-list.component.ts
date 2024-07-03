@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Car } from 'src/app/model/car.model';
 import { CarService } from 'src/app/services/car.service';
+import { Car } from 'src/app/model/car.model';
 import { CarrelloService } from 'src/app/services/carrello.service';
 
 @Component({
@@ -11,45 +11,76 @@ import { CarrelloService } from 'src/app/services/carrello.service';
 export class CarListComponent implements OnInit {
   cars: Car[] = [];
   sortedCars: Car[] = [];
-  currentSortOrder: 'asc' | 'desc' = 'asc'; // Default sorting order
+  brands: string[] = [];
+  selectedBrand: string = '';
+  selectedModel: string = '';
+  currentSortOrder: string = 'asc';
+  errorMessage: string = '';
+  filteredModels: Car[] = []; // Dichiarazione di filteredModels come array di Car
 
-  constructor(private carService: CarService, private carrelloService: CarrelloService) {}
+  constructor(
+    private carService: CarService,
+    private carrelloService: CarrelloService
+  ) {}
 
-  ngOnInit() {
-    this.fetchCars(); // Load cars initially
+  ngOnInit(): void {
+    this.fetchCars();
   }
 
   fetchCars() {
     this.carService.getAllCars().subscribe(
       (data) => {
         this.cars = data;
-        this.sortCars(this.currentSortOrder); // Sort cars based on currentSortOrder initially
+        this.brands = [...new Set(data.map(car => car.brand))];
+        this.applyFiltersAndSort();
       },
       (error) => {
+        this.errorMessage = 'Error fetching cars: ' + error;
         console.error('Error fetching cars:', error);
       }
     );
   }
 
-  sortCars(order: 'asc' | 'desc') {
-    this.currentSortOrder = order;
+  onBrandChange() {
+    this.selectedModel = ''; // Resetta il modello selezionato quando cambia il brand
+    this.applyFiltersAndSort();
+  }
 
-    // Copy array using slice()
-    this.sortedCars = this.cars.slice();
+  onModelChange() {
+    this.applyFiltersAndSort();
+  }
 
-    // Sort based on order
-    if (order === 'asc') {
-      this.sortedCars.sort((a, b) => a.price - b.price);
-    } else if (order === 'desc') {
-      this.sortedCars.sort((a, b) => b.price - a.price);
+  onSortOrderChange() {
+    this.applyFiltersAndSort();
+  }
+
+  applyFiltersAndSort() {
+    let filteredCars = this.cars;
+
+    // Filtra per brand se selezionato
+    if (this.selectedBrand) {
+      filteredCars = filteredCars.filter(car => car.brand === this.selectedBrand);
     }
+
+    // Filtra per modello se selezionato
+    if (this.selectedModel) {
+      filteredCars = filteredCars.filter(car => car.model === this.selectedModel);
+    }
+
+    // Assegna i risultati filtrati a filteredModels
+    this.filteredModels = filteredCars;
+
+    // Applica ordinamento per prezzo
+    this.sortedCars = filteredCars.slice().sort((a, b) => {
+      return this.currentSortOrder === 'asc' ? a.price - b.price : b.price - a.price;
+    });
   }
 
   addToCart(car: Car) {
-    this.carrelloService.addToCart(car);
+    this.carrelloService.addToCart(car); // Aggiungi l'auto al carrello utilizzando il servizio CarrelloService
   }
 
   isInCart(car: Car): boolean {
-    return this.carrelloService.isCarInCart(car);
+    return this.carrelloService.isCarInCart(car); // Verifica se l'auto è nel carrello utilizzando il servizio CarrelloService
   }
 }

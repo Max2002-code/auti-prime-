@@ -1,6 +1,8 @@
+// carrello.component.ts
+
 import { Component, OnInit } from '@angular/core';
-import { Car } from 'src/app/model/car.model';
 import { CarrelloService } from 'src/app/services/carrello.service';
+import { Car } from 'src/app/model/car.model';
 
 @Component({
   selector: 'app-carrello',
@@ -14,11 +16,10 @@ export class CarrelloComponent implements OnInit {
 
   ngOnInit(): void {
     this.carrello = this.carrelloService.getCarrello();
-    console.log('Carrello:', this.carrello); // Verifica nel console.log se il carrello viene popolato correttamente
   }
 
   removeFromCart(car: Car) {
     this.carrelloService.removeFromCart(car);
-    this.carrello = this.carrelloService.getCarrello(); // Aggiorna la lista dopo la rimozione
+    this.carrello = this.carrelloService.getCarrello(); // Aggiorna il carrello dopo la rimozione
   }
 }

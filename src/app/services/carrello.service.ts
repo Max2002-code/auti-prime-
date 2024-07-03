@@ -1,3 +1,5 @@
+// carrello.service.ts
+
 import { Injectable } from '@angular/core';
 import { Car } from '../model/car.model';
 

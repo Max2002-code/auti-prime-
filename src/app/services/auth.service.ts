@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
+import { Auth } from '../model/auth.model';
 
 @Injectable({
   providedIn: 'root'
@@ -20,15 +21,21 @@ export class AuthService {
       'Content-Type': 'application/x-www-form-urlencoded'
     });
 
-    return this.http.post<any>(`${this.baseUrl}/login`, body.toString(), { headers }).pipe(
+    return this.http.post<Auth>(`${this.baseUrl}/login`, body.toString(), { headers }).pipe(
       map(response => {
         // Handle response as needed, e.g., store token in local storage
-        if (response.status === 'ok') {
-          localStorage.setItem('token', response.token);
+        console.log(response);
+        if (response.result === 'ok') {
+          if (response.userSessionId) {
+            localStorage.setItem('token', response.userSessionId);
+          }
+          if (response.user) {
+            localStorage.setItem('user', JSON.stringify(response.user));
+          }
         }
         return response;
       })
-    );
+    );    
   }
 
   register(username: string, password: string): Observable<any> {

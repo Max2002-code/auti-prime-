@@ -18,4 +18,8 @@ export class CarService {
   getCarByModel(model: string): Observable<Car> {
     return this.http.get<Car>(`${this.baseUrl}/model/${model}`);
   }
+
+  addCar(car: Car): Observable<Car> {
+    return this.http.post<Car>(`${this.baseUrl}/add`, car);
+  }
 }

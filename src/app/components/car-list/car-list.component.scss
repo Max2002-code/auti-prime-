@@ -99,4 +99,56 @@
   color: #fff;
 }
 
+.navbar {
+  background-color: #343a40; /* Colore di sfondo della navbar */
+  padding-top: 15px; /* Spazio superiore */
+  padding-bottom: 15px; /* Spazio inferiore */
+}
 
+.navbar-brand {
+  color: #ffffff; /* Colore del testo del brand */
+  font-size: 1.5rem; /* Dimensione del testo del brand */
+  font-weight: bold; /* Grassetto per il brand */
+}
+
+.navbar-brand img {
+  margin-right: 10px; /* Spazio a destra dell'immagine del logo */
+}
+
+.navbar-nav .nav-link {
+  color: #fff;
+  font-weight: bold;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #007bff; /* Colore del testo dei link al passaggio del mouse */
+}
+
+.dropdown-menu {
+  background-color: #343a40; /* Colore di sfondo del menu dropdown */
+}
+
+.dropdown-item {
+  color: #ffffff; /* Colore del testo degli elementi di dropdown */
+}
+
+.dropdown-item:hover {
+  background-color: #6c757d; /* Colore di sfondo degli elementi di dropdown al passaggio del mouse */
+}
+
+.navbar-toggler {
+  border-color: #ffffff; /* Colore del bordo del toggler */
+}
+
+.navbar-toggler-icon {
+  background-color: #ffffff; /* Colore dell'icona del toggler */
+}
+
+.navbar-dark .navbar-toggler-icon {
+  filter: invert(1); /* Inversione del colore dell'icona del toggler in modalità scura */
+}
+
+/* Aggiunto margine superiore per il contenuto principale */
+.main-content {
+  margin-top: 80px; /* Regola questo valore in base alla tua navbar */
+}

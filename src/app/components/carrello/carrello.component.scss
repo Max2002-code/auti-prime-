@@ -1,0 +1,181 @@
+/* Navbar Styles */
+
+.navbar {
+    padding: 15px 0;
+    background-color: #343a40;
+  }
+  
+  .navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .navbar-toggler {
+    border-color: rgba(255, 255, 255, 0.5);
+  }
+  
+  .navbar-dark .navbar-toggler-icon {
+    background-image: url('data:image/svg+xml;charset=UTF-8,%3csvg viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"%3e%3cpath stroke="rgba(255, 255, 255, 0.5)" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22" /%3e%3c/svg%3e');
+  }
+  
+  .navbar-nav .nav-link {
+    color: #fff;
+    font-weight: bold;
+  }
+  
+  .navbar-nav .nav-link:hover {
+    color: #007bff;
+  }
+  
+  /* Hero Section */
+  
+  .hero-section {
+    background-color: #007bff;
+    color: #fff;
+    padding: 150px 0;
+  }
+  
+  .hero-title {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .hero-text {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+  }
+  
+  .btn-primary {
+    background-color: #fff;
+    color: #007bff;
+    border-color: #007bff;
+    font-weight: bold;
+  }
+  
+  .btn-primary:hover {
+    background-color: #007bff;
+    color: #fff;
+  }
+  
+  /* Featured Cars Section */
+  
+  .section-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 40px;
+  }
+  
+  .featured-cars .card {
+    border: none;
+    transition: transform 0.3s ease;
+  }
+  
+  .featured-cars .card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .featured-cars .card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .featured-cars .card-text {
+    color: #666;
+    margin-bottom: 10px;
+  }
+  
+  .btn-outline-primary {
+    color: #007bff;
+    border-color: #007bff;
+  }
+  
+  .btn-outline-primary:hover {
+    background-color: #007bff;
+    color: #fff;
+  }
+  
+  /* Footer Section */
+  
+  .footer {
+    background-color: #343a40;
+    color: #fff;
+    padding: 30px 0;
+  }
+  
+  .footer a {
+    color: #fff;
+  }
+  
+  .footer a:hover {
+    text-decoration: underline;
+  }
+  
+  .footer ul {
+    padding: 0;
+    list-style: none;
+  }
+  
+  .footer ul li {
+    margin-bottom: 10px;
+  }
+  
+  .footer ul li a {
+    color: #fff;
+  }
+  
+  .navbar {
+    background-color: #343a40; /* Colore di sfondo della navbar */
+    padding-top: 15px; /* Spazio superiore */
+    padding-bottom: 15px; /* Spazio inferiore */
+  }
+  
+  .navbar-brand {
+    color: #ffffff; /* Colore del testo del brand */
+    font-size: 1.5rem; /* Dimensione del testo del brand */
+    font-weight: bold; /* Grassetto per il brand */
+  }
+  
+  .navbar-brand img {
+    margin-right: 10px; /* Spazio a destra dell'immagine del logo */
+  }
+  
+  .navbar-nav .nav-link {
+    color: #fff;
+    font-weight: bold;
+  }
+  
+  .navbar-nav .nav-link:hover {
+    color: #007bff; /* Colore del testo dei link al passaggio del mouse */
+  }
+  
+  .dropdown-menu {
+    background-color: #343a40; /* Colore di sfondo del menu dropdown */
+  }
+  
+  .dropdown-item {
+    color: #ffffff; /* Colore del testo degli elementi di dropdown */
+  }
+  
+  .dropdown-item:hover {
+    background-color: #6c757d; /* Colore di sfondo degli elementi di dropdown al passaggio del mouse */
+  }
+  
+  .navbar-toggler {
+    border-color: #ffffff; /* Colore del bordo del toggler */
+  }
+  
+  .navbar-toggler-icon {
+    background-color: #ffffff; /* Colore dell'icona del toggler */
+  }
+  
+  .navbar-dark .navbar-toggler-icon {
+    filter: invert(1); /* Inversione del colore dell'icona del toggler in modalità scura */
+  }
+  
+  /* Aggiunto margine superiore per il contenuto principale */
+  .main-content {
+    margin-top: 80px; /* Regola questo valore in base alla tua navbar */
+  }
