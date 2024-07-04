@@ -83,4 +83,21 @@ export class CarListComponent implements OnInit {
   isInCart(car: Car): boolean {
     return this.carrelloService.isCarInCart(car); // Verifica se l'auto è nel carrello utilizzando il servizio CarrelloService
   }
+  
+  getImageUrl(car: Car): string {
+    console.log('Car ID:', car.id);
+    if (car.images && car.images.length > 0) {
+      console.log('Images found for car:', car.id);
+      // Supponendo che il nome delle immagini sia "car<ID>.jpeg" o "car<ID>.jpg"
+      const imageExtension = car.images[0].type === 'image/jpeg' ? 'jpeg' : 'jpg';
+      return `assets/images/car${car.id}.${imageExtension}`; // Assicurati che il percorso sia corretto
+    } else {
+      console.log('No images found for car:', car.id);
+      // Fallback per restituire un'immagine di default quando non ci sono immagini disponibili
+      return 'assets/images/car-placeholder.jpeg'; // Assicurati che il percorso sia corretto
+    }
+  }
+  
+  
+  
 }
