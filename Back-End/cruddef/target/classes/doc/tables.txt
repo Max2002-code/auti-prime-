@@ -1,0 +1,14 @@
+Tabella:
+    cars
+Colonne:
+    id - int4
+    brand - varchar(255)
+    model - varchar(255)
+    price - float4
+
+Tabella:
+    users
+Colonne:
+    id - int4
+    name - varchar(255)
+    password - varchar(255)

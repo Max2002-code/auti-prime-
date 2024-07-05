@@ -1,0 +1,23 @@
+/auth/login
+    Metodo: POST
+    Parametri:
+        username
+        password
+
+/auth/register
+    Metodo: POST
+    Parametri:
+        username
+        password
+
+/car/all
+    Metodo: GET
+
+/car/id/{parametro}
+    Metodo: GET
+
+/user/all
+    Metodo: GET
+
+/user/name/{parametro}
+    Metodo: GET
