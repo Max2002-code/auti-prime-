@@ -17,6 +17,7 @@ export class CarListComponent implements OnInit {
   currentSortOrder: string = 'asc';
   errorMessage: string = '';
   filteredModels: Car[] = []; // Dichiarazione di filteredModels come array di Car
+  imagePublicId!: string;
 
   constructor(
     private carService: CarService,
@@ -86,18 +87,9 @@ export class CarListComponent implements OnInit {
   
   getImageUrl(car: Car): string {
     console.log('Car ID:', car.id);
-    if (car.images && car.images.length > 0) {
-      console.log('Images found for car:', car.id);
-      // Supponendo che il nome delle immagini sia "car<ID>.jpeg" o "car<ID>.jpg"
-      const imageExtension = car.images[0].type === 'image/jpeg' ? 'jpeg' : 'jpg';
-      return `assets/images/car${car.id}.${imageExtension}`; // Assicurati che il percorso sia corretto
-    } else {
-      console.log('No images found for car:', car.id);
-      // Fallback per restituire un'immagine di default quando non ci sono immagini disponibili
-      return 'assets/images/car-placeholder.jpeg'; // Assicurati che il percorso sia corretto
+    if (car.imagePublicId) {
+      return `https://console.cloudinary.com/pm/c-7086f0b43e91aa357e7d4f24ff9286/media-explorer/images${car.imagePublicId}`;
     }
-  }
-  
-  
-  
+    return 'assets/images/car-placeholder.jpeg'; // Placeholder se non ci sono immagini
+  }  
 }

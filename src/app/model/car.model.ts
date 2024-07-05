@@ -1,14 +1,19 @@
-export interface Car {
-  id: number;
-  brand: string;
-  model: string;
-  price: number;
-  images?: Image[]; // Opzionale, se le immagini sono associate a Car
-}
+// car.model.ts
 
-export interface Image {
+export class Car {
   id: number;
-  name: string;
-  type: string;
-  data: string; // Considera l'utilizzo di base64 per le immagini in Angular
+  model: string;
+  brand: string;
+  price: number;
+  imagePublicId?: string;// Campo per l'identificativo pubblico dell'immagine su Cloudinary
+  images: string;
+
+  constructor(id: number, model: string, brand: string, price: number, imagePublicId: string,  images: string) {
+    this.id = id;
+    this.model = model;
+    this.brand = brand;
+    this.price = price;
+    this.imagePublicId = imagePublicId;
+    this.images = images;
+  }
 }

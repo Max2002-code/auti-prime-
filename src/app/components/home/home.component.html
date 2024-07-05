@@ -1,103 +1,132 @@
-<!DOCTYPE html>
-<html lang="it">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Autoprime</title>
-  <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-  
-</head>
-<body>
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
-    <div class="container">
-      <a class="navbar-brand" href="#">
-        <img src="assets/images/Logo.jpeg" alt="Logo" width="30" height="30" class="d-inline-block align-top">
-        AutoPrime
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link" href="/Contatti">Contatti</a>
-          </li>
-          <ul class="navbar-nav">
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownUtente" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                <img src="assets/images/avatar.png" alt="Avatar" width="30" height="30" class="d-inline-block align-top rounded-circle me-2">
-                Utente
-              </a>
-              <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownUtente">
-                <li><a class="dropdown-item" href="/login">Login</a></li>
-                <li><a class="dropdown-item" href="/register">Registrazione</a></li>
-              </ul>
-            </li>
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="#">
+      <img src="assets/images/Logo.jpeg" alt="Logo" width="30" height="30" class="d-inline-block align-top">
+      AutoPrime
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" href="/Contatti">Contatti</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownUtente" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <img src="assets/images/avatar.png" alt="Avatar" width="30" height="30" class="d-inline-block align-top rounded-circle me-2">
+            Utente
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownUtente">
+            <li><a class="dropdown-item" href="/login">Login</a></li>
+            <li><a class="dropdown-item" href="/register">Registrazione</a></li>
           </ul>
-        </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/carrello">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+              <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l1.313 7h8.17l1.313-7zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+
+<!-- Hero Section -->
+<header class="hero-section">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-6">
+        <h1 class="hero-title">Trova la tua auto perfetta</h1>
+        <p class="hero-text">Esplora la nostra vasta selezione di auto usate di qualità.<br>Trova la tua prossima auto con AutoPrime.</p>
+        <a href="/car-list" class="btn btn-primary btn-lg">Esplora il Catalogo</a>
+      </div>
+      <div class="col-md-6 d-flex justify-content-center align-items-center">
+        <img src="assets/images/car1.jpg" class="fade-in-out img-fluid hero-image" alt="Immagine Animata">
       </div>
     </div>
-  </nav>
+  </div>
+</header>
 
-  <!-- Hero Section -->
-  <header class="hero-section">
-    <div class="container">
-      <div class="row align-items-center">
-        <div class="col-md-6">
-          <h1 class="hero-title">Trova la tua auto perfetta</h1>
-          <p class="hero-text">Esplora la nostra vasta selezione di auto usate di qualità. Trova la tua prossima auto con AutoPrime.</p>
-          <a href="/car-list" class="btn btn-primary btn-lg">Esplora il Catalogo</a>
+<section class="guarantees-section">
+  <div class="container">
+    <h2 class="section-title">Le nostre garanzie</h2>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="guarantee-item">
+          <i class="fas fa-shield-alt"></i>
+          <h3 class="guarantee-title">Garanzia sulla qualità</h3>
+          <p class="guarantee-text">Solo auto controllate e certificate per garantire la massima sicurezza e qualità.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="guarantee-item">
+          <i class="fas fa-money-check-alt"></i>
+          <h3 class="guarantee-title">Finanziamenti personalizzati</h3>
+          <p class="guarantee-text">Offriamo soluzioni di finanziamento adatte alle tue esigenze per rendere l'acquisto più accessibile.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="guarantee-item">
+          <i class="fas fa-car"></i>
+          <h3 class="guarantee-title">Assistenza per le permute</h3>
+          <p class="guarantee-text">Aiutiamo nella valutazione e nel ritiro della tua auto usata per facilitare l'acquisto di una nuova.</p>
         </div>
       </div>
     </div>
-  </header>
+  </div>
+</section>
 
-  <!-- Featured Cars Section -->
-  <section class="featured-cars">
-    <div class="container">
-      <h2 class="section-title">Auto in evidenza</h2>
-      <div class="row">
-        <div class="col-md-4">
-          <div class="card mb-4 shadow-sm">
-            <img src="assets/images/car1.jpg" class="card-img-top" alt="Car Image">
-            <div class="card-body">
-              <h5 class="card-title">Mercedes-Benz Classe A</h5>
-              <p class="card-text">Anno: 2019</p>
-              <p class="card-text">Prezzo: € 25,000</p>
-              <a href="#" class="btn btn-outline-primary">Dettagli</a>
-            </div>
+<section class="about-section">
+  <div class="container">
+    <h2 class="section-title">Chi siamo</h2>
+    <p class="about-text">
+      AutoPrime è il punto di riferimento per l'acquisto di auto usate di qualità. Con anni di esperienza nel settore, ci impegniamo a fornire ai nostri clienti un'esperienza di acquisto senza stress e trasparente.
+    </p>
+    <p class="about-text">
+      Siamo orgogliosi di offrire un'ampia gamma di auto usate, tutte rigorosamente selezionate e controllate per garantire la massima qualità e sicurezza. La nostra missione è rendere il processo di acquisto dell'auto il più semplice e soddisfacente possibile.
+    </p>
+  </div>
+</section>
+
+<section class="feedback-section">
+  <div class="container">
+    <h2 class="section-title">Dacci il tuo Feedback</h2>
+    <div class="row justify-content-center">
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Feedback positivo</h5>
+            <p class="card-text">Sono molto soddisfatto dell'auto che ho acquistato da AutoPrime. Ottimo servizio clienti e auto di qualità!</p>
           </div>
         </div>
-        <div class="col-md-4">
-          <div class="card mb-4 shadow-sm">
-            <img src="assets/images/car2.jpg" class="card-img-top" alt="Car Image">
-            <div class="card-body">
-              <h5 class="card-title">Volkswagen Golf 6</h5>
-              <p class="card-text">Anno: 2018</p>
-              <p class="card-text">Prezzo: € 22,500</p>
-              <a href="#" class="btn btn-outline-primary">Dettagli</a>
-            </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Feedback neutro</h5>
+            <p class="card-text">L'auto che ho acquistato ha avuto alcuni problemi minori che non erano stati menzionati prima dell'acquisto.</p>
           </div>
         </div>
-        <div class="col-md-4">
-          <div class="card mb-4 shadow-sm">
-            <img src="assets/images/car3.jpg" class="card-img-top" alt="Car Image">
-            <div class="card-body">
-              <h5 class="card-title">Smart ForTwo</h5>
-              <p class="card-text">Anno: 2020</p>
-              <p class="card-text">Prezzo: € 30,000</p>
-              <a href="#" class="btn btn-outline-primary">Dettagli</a>
-            </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Feedback negativo</h5>
+            <p class="card-text">Ho avuto un'esperienza molto deludente con AutoPrime. L'auto presentava diversi problemi e il servizio clienti non è stato utile.</p>
           </div>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- Footer -->
-<footer class="footer mt-auto py-3 bg-dark text-light mt-5">
+<section class="footer-section">
+  <footer class="footer mt-auto py-3 bg-dark text-light">
     <div class="container">
       <div class="row">
         <div class="col-md-4">
@@ -110,13 +139,24 @@
         </div>
         <div class="col-md-4">
           <h5>Seguici</h5>
-          <ul class="list-unstyled">
-            <li><a href="#" class="text-light"><i class="fab fa-facebook-f"></i> Facebook</a></li>
-            <li><a href="#" class="text-light"><i class="fab fa-twitter"></i> Twitter</a></li>
-            <li><a href="#" class="text-light"><i class="fab fa-instagram"></i> Instagram</a></li>
-            <li><a href="#" class="text-light"><i class="fab fa-linkedin-in"></i> LinkedIn</a></li>
+          <ul class="list-unstyled d-flex">
+            <li class="me-3">
+              <a href="https://github.com/Max2002-code" class="text-light">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
+                  <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+                </svg> GitHub
+              </a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/in/massimo-berlingeri-51b7222a3/" class="text-light">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
+                  <path d="M2 1.53A1.53 1.53 0 0 1 3.53 0h9.94A1.53 1.53 0 0 1 15 1.53v9.94a1.53 1.53 0 0 1-1.53 1.53H3.53A1.53 1.53 0 0 1 2 11.47V1.53zM4.28 11.44H6V6H4.28v5.44zM5.14 4.94a1.57 1.57 0 1 1-.002-3.14A1.57 1.57 0 0 1 5.14 4.94z"/>
+                  <rect width="2.67" height="7.47" x="7.71" y="4.94" rx=".5"/>
+                </svg> LinkedIn
+              </a>
+            </li>
           </ul>
-        </div>
+        </div>             
       </div>
       <hr class="mt-4 mb-3">
       <div class="row">
@@ -126,7 +166,5 @@
       </div>
     </div>
   </footer>
-  <!-- JavaScript Bundle with Popper -->
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
-</body>
-</html>
+</section>
+

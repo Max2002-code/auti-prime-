@@ -1,18 +1,29 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Car } from 'src/app/model/car.model';
+import { CarService } from 'src/app/services/car.service';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
-export class HomeComponent {
-  bestSellingCars = [
-    { brand: 'Toyota', modello: 'Corolla', price: '25,000', image: 'assets/images/toyotaCorolla.jpg' },
-    { brand: 'Honda', modello: 'Civic', price: '23,500', image: 'assets/images/hondaCivic.jpg' },
-    { brand: 'Ford', modello: 'Mustang', price: '40,000', image: 'assets/images/fordMustang.jpg' },
-    { brand: 'Chevrolet', modello: 'Camaro', price: '38,500', image: 'assets/images/chevroletCamaro.jpg' },
-    // Aggiungi altre auto più vendute secondo necessità
-  ];
+export class HomeComponent implements OnInit {
+  cars: Car[] = []; // Array to hold fetched cars
 
-  constructor() { }
+  constructor(private carService: CarService) {}
+
+  ngOnInit(): void {
+    this.fetchCars(); // Fetch cars on component initialization
+  }
+
+  fetchCars(): void {
+    this.carService.getAllCars().subscribe(
+      (data: Car[]) => {
+        this.cars = data; // Assign fetched cars to the component variable
+      },
+      (error) => {
+        console.error('Error fetching cars:', error); // Handle error if any
+      }
+    );
+  }
 }

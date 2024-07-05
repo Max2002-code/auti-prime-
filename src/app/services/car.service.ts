@@ -22,4 +22,5 @@ export class CarService {
   addCar(car: Car): Observable<Car> {
     return this.http.post<Car>(`${this.baseUrl}/add`, car);
   }
+  
 }
